@@ -5,8 +5,8 @@ class Connect {
 
     
         public $servername = "localhost";
-        public $username = "root";
-        public $password = "jO8P1xyO[UKE*AEZ";
+        public $username = "";
+        public $password = "";
         public $dbname = "sakila";
 
         public function dbconn($servername, $username, $password, $dbname){
