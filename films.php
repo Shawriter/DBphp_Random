@@ -23,7 +23,7 @@
 
         <label for="genres">Filter results by genre:</label>
         <form action="search.php" method="post">
-        <select name="genreOption" id="genre" ">
+        <select name="genreOption" id="genre" onchange="<?php  ?>">
             <?php
 
                 echo "<option value='1'>Action</option>";
@@ -56,15 +56,20 @@
         
         <fieldset class="fieldSet">
             <legend>Add a film to the database:</legend>
-            <form class="form" action="films.php" method="get">
+            <form class="form" action="insertMovie.php" method="get">
 
-                <input type="text" id="genre" name="genre" placeholder="Genre">
-                <input type="text" id="genre" name="genre" placeholder="Genre">
-                <input type="text" id="genre" name="genre" placeholder="Genre">
-                <input type="text" id="genre" name="genre" placeholder="Genre">
-                <input type="text" id="genre" name="genre" placeholder="Genre">
-                <input type="text" id="genre" name="genre" placeholder="Genre">
-                
+                <input type="text" id="title" name="title" placeholder="Title/name">
+                <input type="text" id="description" name="description" placeholder="Description">
+                <input type="text" id="release_year" name="release_year" placeholder="Release year(integer)">
+                <input type="text" id="length" name="length" placeholder="Film length(mins(integer))">
+                <input type="text" id="replacement_cost" name="replacement_cost" placeholder="Replacement cost(float)">
+                <input type="text" id="rating" name="rating" placeholder="Age rating">
+                <input type="text" id="special_features" name="special_features" placeholder="Special features">
+                <input type="text" id="language_name" name="language_name" placeholder="Not in use">
+                <input type="text" id="rental_date" name="rental_date" placeholder="Not in use">
+                <input type="text" id="return_date" name="return_date" placeholder="Not in use">
+                <input type="text" id="amount" name="amount" placeholder="Not in use">
+
                 <button id="search_button" type="submit">Add</button>
             </form>
         </fieldset>
@@ -91,9 +96,20 @@
                 foreach ($search_results as $film) {
                     
                     echo "<div class='film'>";
-                    echo "<h2>" . $film['title'] . "</h2>" ."<br>";
+                    echo "<h2>Title:  " . $film['title'] . "</h2>" ."<br>";
+                    echo "<p>Description:  " . $film['description'] . "</p>" ."<br>";
+                    echo "<p>Release year:  " . $film['release_year'] . "</p>" ."<br>";
+                    echo "<p>Length:  " . $film['length'] . "</p>" ."<br>";
+                    echo "<p>Replacement cost:  " . $film['replacement_cost'] . "</p>" ."<br>";
+                    echo "<p>Rating:  " . $film['rating'] . "</p>" ."<br>";
+                    echo "<p>Special features:  " . $film['special_features'] . "</p>" ."<br>";
+                   /*echo "<p>Language:  " . $film['name'] . "</p>" ."<br>";
+                    echo "<p>Rental date:  " . $film['rental_date'] . "</p>" ."<br>";
+                    echo "<p>Return date:  " . $film['return_date'] . "</p>" ."<br>";
+                    echo "<p>Rent cost:  " . $film['amount'] . "</p>" ."<br>";
+                
                     echo "</div>";
-                    echo "<br>";
+                    echo "<br>";*/
                     
                 }
                 echo "</div>";

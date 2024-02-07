@@ -49,18 +49,4 @@ class Preparer extends Connect {
     
 
 }
-
-
-    
-   
-function query_mysql($conn, $query) {
-    $result = $conn->query($query);
-    if ($result) {
-        return $result;
-    } else {
-        return false;
-    }
-}
-
-
 ?>

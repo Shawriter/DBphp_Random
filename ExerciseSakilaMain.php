@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         
-        <h1 id="h1">Welcome to Sakila horror movie database</h1>
+        <h1 id="h1">Welcome to Sakila movie database</h1>
         <img id="bgimg" src="Styles/redeyes.PNG" alt="Sakila bground">
 
     </div>
